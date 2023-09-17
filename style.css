@@ -7,6 +7,26 @@
     box-sizing: border-box;
 }
 
+input {
+    font-family: inherit;
+    border: none;
+}
+
+button {
+    border: none;
+    background-color: initial;
+    outline: none; /* don't forget indicator for focus state */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .page {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
@@ -35,10 +55,97 @@
     grid-template-rows: 65px 724px 1fr;    
 }
 
+/* ------------ */
+
 .header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+
+    display: flex;
+    align-items: center;
 }
+
+.logo {
+    margin-left: 26px;
+    margin-right: 48px;
+}
+
+.search {
+    position: relative;
+}
+
+.search__input {
+    background-color: #EEF3F4;
+    height: 34px;
+    width: 405px;
+    border-radius: 500px;
+    font-size: 13px;
+    color: #555A58;
+    padding-left: 20px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search__input:focus {
+    width: 425px;
+
+}
+
+.search__input::placeholder {
+    color:#A9B4B7;
+}
+
+.search__submit {
+    font-size: 15px;
+    color: #A9B4B7; 
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+    right: 13px;
+    top: 8px;
+}
+
+.search__submit:focus {
+    color: #555A58;
+}
+
+.search__icon {
+
+}
+x
+
+.nav {
+margin-left: auto;
+}
+
+.nav__list {
+    display:flex;
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+    padding: 0 20px;
+    transition: all 0.4s;
+    height: 65px; /* Step 1 - This increased height of element to same as header */
+    display: block; /* Step 3 - Links are inline elment. This changed them to block to take up full height of header */
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    background-color: #EEF3F4;
+}
+
+.nav__icon {
+   color: #A9B4B7;
+   font-size: 22px;
+   line-height: 65px; /* Step 2 - Setting this to same height as nav__link caused icons to be centered vertically */
+}
+
+
+/* ------------ */
 
 .sidebar {
     background-color: #11271F;
@@ -46,11 +153,15 @@
     grid-row: 2 / 4;
 }
 
+/* ------------ */
+
 .gallery {
     background-color: #EEF3F4;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
+
+/* ------------ */
 
 .steps {
     background-color: #E7EDEE;
